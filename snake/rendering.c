@@ -17,6 +17,9 @@ void render_game(const game_t *game){
         case GAME_OVER_STATE:
             render_game_over(game);
             break;
+        case WIN_STATE:
+            render_win(game);
+            break;
     }
 }
 
