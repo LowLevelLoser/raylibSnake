@@ -58,7 +58,7 @@ void run_game(game_t *game, int frame){
             break;
     }
 
-    if(frame % 8 == 0 && game->state == RUNNING_STATE){
+    if(frame % 2 == 0 && game->state == RUNNING_STATE){
         move_snake(game);
         game->prev_direction = game->direction;
     }
