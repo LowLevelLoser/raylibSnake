@@ -8,7 +8,7 @@ int main(){
     
     InitWindow(SCREEN_SIDES, SCREEN_SIDES + SCORE_MARGIN + SCORE_MARGIN, "Snake");
     InitAudioDevice();
-    SetTargetFPS(60);
+    SetTargetFPS(15);
     int frame = 0;
 
     game_t game = {
