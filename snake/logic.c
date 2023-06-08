@@ -21,6 +21,7 @@ void run_game(game_t *game, int frame){
     }
 
     switch(GetKeyPressed()){
+        case KEY_K:
         case KEY_UP:
             if (game->prev_direction != DOWN){
                 game->direction = UP;
@@ -28,7 +29,9 @@ void run_game(game_t *game, int frame){
             }
             else
                 game->queued_direction = UP;
+            printf("UP\n");
             break;
+        case KEY_J:
         case KEY_DOWN:
             if (game->prev_direction != UP){
                 game->direction = DOWN;
@@ -36,7 +39,9 @@ void run_game(game_t *game, int frame){
             }
             else
                 game->queued_direction = DOWN;
+            printf("DOWN\n");
             break;
+        case KEY_L:
         case KEY_RIGHT:
             if (game->prev_direction != LEFT){
                 game->direction = RIGHT;
@@ -44,7 +49,9 @@ void run_game(game_t *game, int frame){
             }
             else
                 game->queued_direction = RIGHT;
+            printf("RIGHT\n");
             break;
+        case KEY_H:
         case KEY_LEFT:
             if (game->prev_direction != RIGHT){
                 game->direction = LEFT;
@@ -52,6 +59,7 @@ void run_game(game_t *game, int frame){
             }
             else
                 game->queued_direction = LEFT;
+            printf("LEFT\n");
             break;
         case KEY_R:
             restart(game);
